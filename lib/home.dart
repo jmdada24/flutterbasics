@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterbasics/coffee_prefs.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -32,7 +33,7 @@ class Home extends StatelessWidget {
           Container(
             color: Colors.brown[100],
             padding: EdgeInsets.all(20),
-            child: Text("Kumusta kanaaa!"),
+            child: CoffeePrefs(),
 
           ),
 
