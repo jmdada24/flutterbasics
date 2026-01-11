@@ -1,54 +1,70 @@
 import 'package:flutter/material.dart';
+import 'package:flutterbasics/home.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
+  runApp(const MaterialApp(
+    home: Home(),
 
-      appBar: AppBar(
-        title: Text("The Coffee Day"),
-        foregroundColor: Colors.white,
-        backgroundColor: const Color.fromARGB(255, 131, 84, 66),
-        centerTitle: true,
-      ),
-
-      body: const Home(),
-
-    )
 
 
   ));
 
 }
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class Sandbox extends StatelessWidget {
+  const Sandbox({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.orange,
-      // width: 200,
-      // height: 100,
-      padding: EdgeInsets.all(20),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Sandbox"),
+        backgroundColor: Colors.grey,
 
-      //margin for specific position
-      // margin: EdgeInsets.only(left: 10),
+      ),
+      body: Column(
+        //About Column
 
-      // Left Top Right Bottom
-      margin: EdgeInsets.fromLTRB(10, 40, 0, 0),
+        // Cross Axis is like a X-axis and by default it usually centers the container
+        // crossAxisAlignment: CrossAxisAlignment.start,
+        // crossAxisAlignment: CrossAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
 
-                                              // Styling the text
-      child: const Text("Hello Worlds", style: TextStyle(
-        fontSize: 18,
-        letterSpacing: 4,
-        decoration: TextDecoration.underline,
-        fontStyle: FontStyle.italic,
+        // The Main Axis is like a Y-axis and by default goes to start of the container
+        mainAxisAlignment: MainAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.spaceAround,
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
-      ),),
-      
+        children: [
+          Container(
+            width: 100,
+           
+            color: Colors.red,
+            child: const Text("one"),
+
+          ),
+
+           Container(
+            width: 200,
+           
+            color: Colors.green,
+            child: const Text("two"),
+
+          ),
+
+           Container(
+            width: 300,
+           
+            color: Colors.blue,
+            child: const Text("three"),
+
+          ),
+
+          
+        ],
+
+
+      ),
     );
-
-    
   }
-
 }
