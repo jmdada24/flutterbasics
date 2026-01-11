@@ -27,7 +27,25 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.orange,
-      child: const Text("Hello Worlds"),
+      // width: 200,
+      // height: 100,
+      padding: EdgeInsets.all(20),
+
+      //margin for specific position
+      // margin: EdgeInsets.only(left: 10),
+
+      // Left Top Right Bottom
+      margin: EdgeInsets.fromLTRB(10, 40, 0, 0),
+
+                                              // Styling the text
+      child: const Text("Hello Worlds", style: TextStyle(
+        fontSize: 18,
+        letterSpacing: 4,
+        decoration: TextDecoration.underline,
+        fontStyle: FontStyle.italic,
+
+      ),),
+      
     );
 
     
