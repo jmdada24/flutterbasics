@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutterbasics/home.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    home: Home(),
+
+// void main() {
+//   runApp(const MaterialApp(
+//     home: Sandbox(),
+
+//   ));
+
+// }
 
 
-
-  ));
-
-}
+void main() => runApp(const MaterialApp(home: Home()));
 
 class Sandbox extends StatelessWidget {
   const Sandbox({super.key});
@@ -18,7 +20,10 @@ class Sandbox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Sandbox"),
+        title: const Text("Sandbox", style: TextStyle(
+          color: Colors.white,
+
+        ),),
         backgroundColor: Colors.grey,
 
       ),
@@ -26,10 +31,9 @@ class Sandbox extends StatelessWidget {
         
       Row(
 
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.end,
 
-
-        crossAxisAlignment: CrossAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.center,
   
         children: [
 

@@ -18,7 +18,8 @@ class CoffeePrefs extends StatelessWidget {
               colorBlendMode: BlendMode.multiply,
 
             ),
-            SizedBox(width: 50,),
+            const Expanded(child: SizedBox()),
+            const Text('+'),
           ],
 
         ),
@@ -33,11 +34,11 @@ class CoffeePrefs extends StatelessWidget {
               colorBlendMode: BlendMode.multiply,
 
             ),
-            SizedBox(width: 50,),
+            const Expanded(child: SizedBox(width: 50,)),
+            const Text('+'),
           ],
         )
 
-          Image.asset('assets/img/coffee_bg.jpg')
       ],
     );
   }
