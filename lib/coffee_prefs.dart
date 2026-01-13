@@ -18,6 +18,9 @@ class CoffeePrefs extends StatelessWidget {
               colorBlendMode: BlendMode.multiply,
 
             ),
+
+
+            // using Expanded method to expand the sizedbox to take the available space
             const Expanded(child: SizedBox()),
             const Text('+'),
           ],
@@ -34,6 +37,9 @@ class CoffeePrefs extends StatelessWidget {
               colorBlendMode: BlendMode.multiply,
 
             ),
+
+
+            // using Expanded method to expand the sizedbox to take the available space
             const Expanded(child: SizedBox(width: 50,)),
             const Text('+'),
           ],
