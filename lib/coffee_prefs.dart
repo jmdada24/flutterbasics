@@ -1,20 +1,61 @@
 import 'package:flutter/material.dart';
 
-class CoffeePrefs extends StatelessWidget {
+class CoffeePrefs extends StatefulWidget {
   const CoffeePrefs({super.key});
 
-  // Logic for onPressed method
+  @override
+  State<CoffeePrefs> createState() => _CoffeePrefsState();
+}
 
+
+class _CoffeePrefsState extends State<CoffeePrefs> {
+
+  int strength = 1;
+  int sugars = 1;
+
+
+  // Logic for onPressed method
   void increaseStrength(){
-    print('inc strength by 1');
+    
+    // 3rd step use setState keyword to display the output (increasing the number)
+    setState((){
+      strength = strength < 5 ? strength + 1 : 1;
+
+    });
+
+
+
+      // 2nd step testing for actual logic
+      //strength = strength < 5 ? strength + 1 : 1;
+      // print('Increasing strength: $strength');
+
+
+
+    // 1st step
+    // print('inc strength by 1');
 
   }
 
   void increaseSugars(){
-    print('inc sugars by 1');
+
+    // 3rd step use setState keyword to display the output (increasing the number)
+    setState((){
+      sugars = sugars < 5 ? sugars + 1 : 0;
+
+    });
+
+
+
+    // 2nd step testing for actual logic
+    // sugars = sugars < 5 ? sugars + 1 : 0;
+    // print('Increasing sugars: $sugars');
+    
+    
+    
+    //1st step
+    // print('inc sugars by 1');
       
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +64,8 @@ class CoffeePrefs extends StatelessWidget {
 
         Row(
           children: [
-            Text("Strength: "),
-            Text('3'),
+            const Text("Strength: "),
+            Text('$strength'),
             Image.asset('assets/img/coffee_bean.png',
               width: 25,
               color: Colors.brown[100],
@@ -52,8 +93,8 @@ class CoffeePrefs extends StatelessWidget {
         ),
         Row(
           children: [
-            Text("Sugars: "),
-            Text('3'),
+            const Text("Sugars: "),
+            Text('$sugars'),
 
             Image.asset('assets/img/sugar_cube.png',
               width: 25,
@@ -66,11 +107,12 @@ class CoffeePrefs extends StatelessWidget {
             // using Expanded method to expand the sizedbox to take the available space
             const Expanded(child: SizedBox()),
             // onPressed method checking if it works 
-            TextButton(
-            style: TextButton.styleFrom(
-              foregroundColor: Colors.brown,
+            FilledButton(
+              style: FilledButton.styleFrom(
+                backgroundColor: Colors.brown,
+                foregroundColor: Colors.white,
 
-            ),  
+              ),
             onPressed: increaseSugars,
             child: const Text('+')),
             
