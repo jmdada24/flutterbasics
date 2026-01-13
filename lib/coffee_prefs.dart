@@ -65,14 +65,20 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
         Row(
           children: [
             const Text("Strength: "),
-            Text('$strength'),
-            Image.asset('assets/img/coffee_bean.png',
-              width: 25,
-              color: Colors.brown[100],
-              colorBlendMode: BlendMode.multiply,
+            
+            
+            // Text('$strength'),
 
-            ),
 
+
+            for (int i = 0; i < strength; i++)
+              Image.asset('assets/img/coffee_bean.png',
+                width: 25,
+                color: Colors.brown[100],
+                colorBlendMode: BlendMode.multiply,
+
+              ),
+            
 
             // using Expanded method to expand the sizedbox to take the available space
             const Expanded(child: SizedBox()),
@@ -94,8 +100,15 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
         Row(
           children: [
             const Text("Sugars: "),
-            Text('$sugars'),
 
+
+            // Text('$sugars'),
+
+
+            if (sugars == 0)
+              const Text('No Sugars...'),
+
+            for (int i = 0; i < sugars; i++)
             Image.asset('assets/img/sugar_cube.png',
               width: 25,
               color: Colors.brown[100],
